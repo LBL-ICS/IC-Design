@@ -1,0 +1,49 @@
+#!/bin/csh -f
+################################################################################
+# simulation top script
+# change modelsim in this file dir and run "do this_file.do"
+# project dir ---+---> hdl source dir
+#                +---> sim script dir
+#
+################################################################################
+
+# check if current dir has modelsim config file
+set has_config  [file exists modelsim.do]
+# config modelsim 
+if {$has_config==1} { do modelsim.do  ; }
+
+echo "+====================================="
+echo "| Creat Lib Work soc                  "
+echo "+====================================="
+vlib work
+vmap work work 
+
+echo "+====================================="
+echo "| Complile RTL Code of soc            "
+echo "+====================================="
+vlog -v ../dut/seq_inst_and_or.v ../dut/comb_and_or.v ../tb/seq_inst_and_or_tb.v 
+
+echo "+====================================="
+echo "| Compiler Pass                       "
+echo "| Being to Run Simulation             "
+echo "+====================================="
+vsim work.seq_inst_and_or_tb -t 1ns
+
+###################################### mus  ####################################
+add wave -noupdate -format logic -radix hexadecimal seq_inst_and_or_tb/u_seq_inst_and_or/rst     
+add wave -noupdate -format logic -radix hexadecimal seq_inst_and_or_tb/u_seq_inst_and_or/clk     
+add wave -noupdate -format logic -radix hexadecimal seq_inst_and_or_tb/u_seq_inst_and_or/n     
+add wave -noupdate -format logic -radix hexadecimal seq_inst_and_or_tb/u_seq_inst_and_or/a     
+add wave -noupdate -format logic -radix hexadecimal seq_inst_and_or_tb/u_seq_inst_and_or/b     
+add wave -noupdate -format logic -radix hexadecimal seq_inst_and_or_tb/u_seq_inst_and_or/c     
+add wave -noupdate -format logic -radix hexadecimal seq_inst_and_or_tb/u_seq_inst_and_or/d     
+add wave -noupdate -format logic -radix hexadecimal seq_inst_and_or_tb/u_seq_inst_and_or/e     
+add wave -noupdate -format logic -radix hexadecimal seq_inst_and_or_tb/u_seq_inst_and_or/f     
+add wave -noupdate -format logic -radix hexadecimal seq_inst_and_or_tb/u_seq_inst_and_or/g     
+      
+add wave -noupdate -format logic -radix hexadecimal seq_inst_and_or_tb/u_seq_inst_and_or/j     
+add wave -noupdate -format logic -radix hexadecimal seq_inst_and_or_tb/u_seq_inst_and_or/l     
+
+add wave -noupdate -format logic -radix hexadecimal seq_inst_and_or_tb/u_seq_inst_and_or/u1_comb_and_or/e     
+add wave -noupdate -format logic -radix hexadecimal seq_inst_and_or_tb/u_seq_inst_and_or/u2_comb_and_or/e     
+run 2us

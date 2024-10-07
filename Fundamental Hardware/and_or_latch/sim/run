@@ -1,0 +1,40 @@
+#!/bin/csh -f
+################################################################################
+# simulation top script
+# change modelsim in this file dir and run "do this_file.do"
+# project dir ---+---> hdl source dir
+#                +---> sim script dir
+#
+################################################################################
+
+# check if current dir has modelsim config file
+set has_config  [file exists modelsim.do]
+# config modelsim 
+if {$has_config==1} { do modelsim.do  ; }
+
+echo "+====================================="
+echo "| Creat Lib Work soc                  "
+echo "+====================================="
+vlib work
+vmap work work 
+
+echo "+====================================="
+echo "| Complile RTL Code of soc            "
+echo "+====================================="
+vlog -sv ../dut/and_or_latch.sv ../tb/and_or_latch_tb.sv 
+
+echo "+====================================="
+echo "| Compiler Pass                       "
+echo "| Being to Run Simulation             "
+echo "+====================================="
+vsim work.and_or_latch_tb -t 1ns
+
+###################################### mus  ####################################
+add wave -noupdate -format logic -color red -radix hexadecimal and_or_latch_tb/u_and_or_latch/f     
+add wave -noupdate -format logic -color blue -radix hexadecimal and_or_latch_tb/u_and_or_latch/en     
+add wave -noupdate -format logic -color yellow -radix hexadecimal and_or_latch_tb/u_and_or_latch/a     
+add wave -noupdate -format logic -color yellow -radix hexadecimal and_or_latch_tb/u_and_or_latch/b     
+add wave -noupdate -format logic -color yellow -radix hexadecimal and_or_latch_tb/u_and_or_latch/c     
+add wave -noupdate -format logic -color yellow -radix hexadecimal and_or_latch_tb/u_and_or_latch/d     
+      
+run 500ns

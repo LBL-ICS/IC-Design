@@ -1,0 +1,71 @@
+#!/bin/csh -f
+################################################################################
+# simulation top script
+# change modelsim in this file dir and run "do this_file.do"
+# project dir ---+---> hdl source dir
+#                +---> sim script dir
+#
+################################################################################
+
+# check if current dir has modelsim config file
+set has_config  [file exists modelsim.do]
+# config modelsim 
+if {$has_config==1} { do modelsim.do  ; }
+
+echo "+====================================="
+echo "| Creat Lib Work soc                  "
+echo "+====================================="
+vlib work
+vmap work work 
+
+echo "+====================================="
+echo "| Complile RTL Code of soc            "
+echo "+====================================="
+vlog -f ../filelist/filelist.f  
+
+echo "+====================================="
+echo "| Compiler Pass                       "
+echo "| Being to Run Simulation             "
+echo "+====================================="
+vsim work.tb_basic_ddot -t 1ns
+
+###################################### mus  ####################################
+add wave -radix hexadecimal tb_basic_ddot/u_basic_ddot/clk  
+add wave -radix hexadecimal tb_basic_ddot/u_basic_ddot/rst  
+add wave -radix hexadecimal tb_basic_ddot/u_basic_ddot/ready
+add wave -radix hexadecimal tb_basic_ddot/u_basic_ddot/x0   
+add wave -radix hexadecimal tb_basic_ddot/u_basic_ddot/x1   
+add wave -radix hexadecimal tb_basic_ddot/u_basic_ddot/x2   
+add wave -radix hexadecimal tb_basic_ddot/u_basic_ddot/x3   
+add wave -radix hexadecimal tb_basic_ddot/u_basic_ddot/x4   
+add wave -radix hexadecimal tb_basic_ddot/u_basic_ddot/x5   
+add wave -radix hexadecimal tb_basic_ddot/u_basic_ddot/x6   
+add wave -radix hexadecimal tb_basic_ddot/u_basic_ddot/x7   
+add wave -radix hexadecimal tb_basic_ddot/u_basic_ddot/y0   
+add wave -radix hexadecimal tb_basic_ddot/u_basic_ddot/y1   
+add wave -radix hexadecimal tb_basic_ddot/u_basic_ddot/y2   
+add wave -radix hexadecimal tb_basic_ddot/u_basic_ddot/y3   
+add wave -radix hexadecimal tb_basic_ddot/u_basic_ddot/y4   
+add wave -radix hexadecimal tb_basic_ddot/u_basic_ddot/y5   
+add wave -radix hexadecimal tb_basic_ddot/u_basic_ddot/y6   
+add wave -radix hexadecimal tb_basic_ddot/u_basic_ddot/y7   
+add wave -radix hexadecimal tb_basic_ddot/u_basic_ddot/vld  
+add wave -radix hexadecimal tb_basic_ddot/u_basic_ddot/z    
+
+add wave -radix hexadecimal tb_basic_ddot/u_basic_ddot/cur_state    
+add wave -radix hexadecimal tb_basic_ddot/u_basic_ddot/p0   
+add wave -radix hexadecimal tb_basic_ddot/u_basic_ddot/p1   
+add wave -radix hexadecimal tb_basic_ddot/u_basic_ddot/p2   
+add wave -radix hexadecimal tb_basic_ddot/u_basic_ddot/p3   
+add wave -radix hexadecimal tb_basic_ddot/u_basic_ddot/p4   
+add wave -radix hexadecimal tb_basic_ddot/u_basic_ddot/p5   
+add wave -radix hexadecimal tb_basic_ddot/u_basic_ddot/p6   
+add wave -radix hexadecimal tb_basic_ddot/u_basic_ddot/p7   
+add wave -radix hexadecimal tb_basic_ddot/u_basic_ddot/s0   
+add wave -radix hexadecimal tb_basic_ddot/u_basic_ddot/s1   
+add wave -radix hexadecimal tb_basic_ddot/u_basic_ddot/s2   
+add wave -radix hexadecimal tb_basic_ddot/u_basic_ddot/s3   
+add wave -radix hexadecimal tb_basic_ddot/u_basic_ddot/s4   
+add wave -radix hexadecimal tb_basic_ddot/u_basic_ddot/s5   
+
+run 1us                                                                            

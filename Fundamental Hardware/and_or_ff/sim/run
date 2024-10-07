@@ -1,0 +1,42 @@
+#!/bin/csh -f
+################################################################################
+# simulation top script
+# change modelsim in this file dir and run "do this_file.do"
+# project dir ---+---> hdl source dir
+#                +---> sim script dir
+#
+################################################################################
+
+# check if current dir has modelsim config file
+set has_config  [file exists modelsim.do]
+# config modelsim 
+if {$has_config==1} { do modelsim.do  ; }
+
+echo "+====================================="
+echo "| Creat Lib Work soc                  "
+echo "+====================================="
+vlib work
+vmap work work 
+
+echo "+====================================="
+echo "| Complile RTL Code of soc            "
+echo "+====================================="
+vlog -v ../dut/and_or_ff.v ../tb/and_or_ff_tb.v 
+
+echo "+====================================="
+echo "| Compiler Pass                       "
+echo "| Being to Run Simulation             "
+echo "+====================================="
+vsim work.and_or_ff_tb -t 1ns
+
+###################################### mus  ####################################
+add wave -noupdate -format logic -radix hexadecimal and_or_ff_tb/u_and_or_ff/rst     
+add wave -noupdate -format logic -radix hexadecimal and_or_ff_tb/u_and_or_ff/clk     
+add wave -noupdate -format logic -radix hexadecimal and_or_ff_tb/u_and_or_ff/f     
+add wave -noupdate -format logic -radix hexadecimal and_or_ff_tb/u_and_or_ff/e     
+add wave -noupdate -format logic -radix hexadecimal and_or_ff_tb/u_and_or_ff/a     
+add wave -noupdate -format logic -radix hexadecimal and_or_ff_tb/u_and_or_ff/b     
+add wave -noupdate -format logic -radix hexadecimal and_or_ff_tb/u_and_or_ff/c     
+add wave -noupdate -format logic -radix hexadecimal and_or_ff_tb/u_and_or_ff/d     
+      
+run 200ns

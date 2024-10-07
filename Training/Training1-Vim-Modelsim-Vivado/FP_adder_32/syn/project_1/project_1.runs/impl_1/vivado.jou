@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Mon Sep 30 21:22:04 2024
+# Process ID: 22052
+# Current directory: C:/Mirror/GitProject/IC-Design/Projects/Training/syn/project_1/project_1.runs/impl_1
+# Command line: vivado.exe -log FP_adder_32_13cc.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source FP_adder_32_13cc.tcl -notrace
+# Log file: C:/Mirror/GitProject/IC-Design/Projects/Training/syn/project_1/project_1.runs/impl_1/FP_adder_32_13cc.vdi
+# Journal file: C:/Mirror/GitProject/IC-Design/Projects/Training/syn/project_1/project_1.runs/impl_1\vivado.jou
+#-----------------------------------------------------------
+source FP_adder_32_13cc.tcl -notrace

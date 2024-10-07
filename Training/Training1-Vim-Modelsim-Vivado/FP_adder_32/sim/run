@@ -1,0 +1,43 @@
+#!/bin/csh -f
+################################################################################
+# simulation top script
+# change modelsim in this file dir and run "do this_file.do"
+# project dir ---+---> hdl source dir
+#                +---> sim script dir
+#
+################################################################################
+
+# check if current dir has modelsim config file
+set has_config  [file exists modelsim.do]
+# config modelsim 
+if {$has_config==1} { do modelsim.do  ; }
+
+echo "+====================================="
+echo "| Creat Lib Work soc                  "
+echo "+====================================="
+vlib work
+vmap work work 
+
+echo "+====================================="
+echo "| Complile RTL Code of soc            "
+echo "+====================================="
+vlog -f ../filelist/filelist_13cc.f  
+#vlog -f ../filelist/filelist_13cc.f  
+
+echo "+====================================="
+echo "| Compiler Pass                       "
+echo "| Being to Run Simulation             "
+echo "+====================================="
+vsim work.tb_FP_adder -t 1ns
+
+################## #################### mus  ####################################
+add wave -noupdate -format logic -radix hexadecimal tb_FP_adder/in_valid
+add wave -noupdate -format logic -radix hexadecimal tb_FP_adder/clock
+add wave -noupdate -format logic -radix hexadecimal tb_FP_adder/reset
+add wave -noupdate -format logic -radix hexadecimal tb_FP_adder/in_valid
+add wave -noupdate -format logic -radix hexadecimal tb_FP_adder/in_data_0
+add wave -noupdate -format logic -radix hexadecimal tb_FP_adder/in_data_1
+add wave -noupdate -format logic -radix hexadecimal tb_FP_adder/out_data
+add wave -noupdate -format logic -radix hexadecimal tb_FP_adder/out_ready
+
+run 1us                                                                            

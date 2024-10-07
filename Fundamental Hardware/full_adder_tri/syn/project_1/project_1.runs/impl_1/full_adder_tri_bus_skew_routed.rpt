@@ -1,0 +1,16 @@
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version      : Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
+| Date              : Mon Feb 26 20:21:00 2024
+| Host              : Thinkpad-X1-NN running 64-bit major release  (build 9200)
+| Command           : report_bus_skew -warn_on_violation -file full_adder_tri_bus_skew_routed.rpt -pb full_adder_tri_bus_skew_routed.pb -rpx full_adder_tri_bus_skew_routed.rpx
+| Design            : full_adder_tri
+| Device            : xcu250-figd2104
+| Speed File        : -2L  PRODUCTION 1.27 02-28-2020
+| Temperature Grade : E
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Bus Skew Report
+
+No bus skew constraints
+

@@ -1,0 +1,109 @@
+m255
+K4
+z2
+!s11f vlog 2021.1 2021.02, Feb  3 2021
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Mirror/GitProject/IC-Design/Projects/Training1-Vim-Modelsim-Vivado/FP_adder_32
+vFP_adder_32_1cc
+Z1 DXx6 sv_std 3 std 0 22 VYECXdT12H8WgbUP_5Y6:3
+Z2 !s110 1728315250
+!i10b 1
+!s100 JI@Mg?WA3Za<YIGBoJem51
+ImkbY45PeS1gSjcRYG4lcX3
+S1
+R0
+Z3 w1697764980
+Z4 8C:/Mirror/GitProject/IC-Design/Projects/Training1-Vim-Modelsim-Vivado/FP_adder_32/dut/FP_adder_32_1cc.sv
+Z5 FC:/Mirror/GitProject/IC-Design/Projects/Training1-Vim-Modelsim-Vivado/FP_adder_32/dut/FP_adder_32_1cc.sv
+!i122 2
+L0 26 210
+Z6 VDg1SIo80bB@j0V0VzS_@n1
+Z7 OV;L;2021.1;73
+r1
+!s85 0
+31
+Z8 !s108 1728315250.000000
+Z9 !s107 C:/Mirror/GitProject/IC-Design/Projects/Training1-Vim-Modelsim-Vivado/FP_adder_32/dut/FP_adder_32_1cc.sv|
+Z10 !s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Mirror/GitProject/IC-Design/Projects/Training1-Vim-Modelsim-Vivado/FP_adder_32/dut/FP_adder_32_1cc.sv|
+!i113 1
+Z11 o-work work -sv
+Z12 tCvgOpt 0
+n@f@p_adder_32_1cc
+vfull_adder_bw24
+R1
+R2
+!i10b 1
+!s100 WU;<:OHjCWYg1bm=UBmE31
+I661@d?:liB^ja7[a5ao9N0
+S1
+R0
+R3
+R4
+R5
+!i122 2
+L0 14 11
+R6
+R7
+r1
+!s85 0
+31
+R8
+R9
+R10
+!i113 1
+R11
+R12
+vfull_subtractor_bw8
+R1
+R2
+!i10b 1
+!s100 IEg3C?M9QC@fGPIkQc;S?1
+I^QN;[SYS0mKR@FR3T1GJB1
+S1
+R0
+R3
+R4
+R5
+!i122 2
+L0 2 11
+R6
+R7
+r1
+!s85 0
+31
+R8
+R9
+R10
+!i113 1
+R11
+R12
+vtb_FP_adder
+R1
+R2
+!i10b 1
+!s100 2OUdN]l>b1ggOzPVD^_AN2
+IZ9cS2oUfRm^<<00;X;XZP3
+S1
+R0
+w1728315237
+8C:/Mirror/GitProject/IC-Design/Projects/Training1-Vim-Modelsim-Vivado/FP_adder_32/tb/tb_FP_adder.sv
+FC:/Mirror/GitProject/IC-Design/Projects/Training1-Vim-Modelsim-Vivado/FP_adder_32/tb/tb_FP_adder.sv
+!i122 3
+L0 17 111
+R6
+R7
+r1
+!s85 0
+31
+R8
+!s107 C:/Mirror/GitProject/IC-Design/Projects/Training1-Vim-Modelsim-Vivado/FP_adder_32/tb/tb_FP_adder.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Mirror/GitProject/IC-Design/Projects/Training1-Vim-Modelsim-Vivado/FP_adder_32/tb/tb_FP_adder.sv|
+!i113 1
+R11
+R12
+ntb_@f@p_adder

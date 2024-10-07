@@ -1,0 +1,55 @@
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
+| Date         : Mon Feb 26 21:21:15 2024
+| Host         : Thinkpad-X1-NN running 64-bit major release  (build 9200)
+| Command      : report_methodology -file full_adder_latch_methodology_drc_routed.rpt -pb full_adder_latch_methodology_drc_routed.pb -rpx full_adder_latch_methodology_drc_routed.rpx
+| Design       : full_adder_latch
+| Device       : xcu250-figd2104-2L-e
+| Speed File   : -2L
+| Design State : Fully Routed
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Report Methodology
+
+Table of Contents
+-----------------
+1. REPORT SUMMARY
+2. REPORT DETAILS
+
+1. REPORT SUMMARY
+-----------------
+            Netlist: netlist
+          Floorplan: design_1
+      Design limits: <entire design considered>
+             Max violations: <unlimited>
+             Violations found: 4
++-----------+----------+-------------------+------------+
+| Rule      | Severity | Description       | Violations |
++-----------+----------+-------------------+------------+
+| TIMING-20 | Warning  | Non-clocked latch | 4          |
++-----------+----------+-------------------+------------+
+
+2. REPORT DETAILS
+-----------------
+TIMING-20#1 Warning
+Non-clocked latch  
+The latch c_reg[0] cannot be properly analyzed as its control pin c_reg[0]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#2 Warning
+Non-clocked latch  
+The latch c_reg[1] cannot be properly analyzed as its control pin c_reg[1]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#3 Warning
+Non-clocked latch  
+The latch c_reg[2] cannot be properly analyzed as its control pin c_reg[2]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#4 Warning
+Non-clocked latch  
+The latch c_reg[3] cannot be properly analyzed as its control pin c_reg[3]/G is not reached by a timing clock
+Related violations: <none>
+
+

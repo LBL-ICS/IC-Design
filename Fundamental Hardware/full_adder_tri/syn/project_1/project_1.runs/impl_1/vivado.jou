@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Mon Feb 26 20:15:27 2024
+# Process ID: 31012
+# Current directory: C:/Mirror/Teaching/CENG5534/ADSD_SP2024/projects/full_adder_tri/syn/project_1/project_1.runs/impl_1
+# Command line: vivado.exe -log full_adder_tri.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source full_adder_tri.tcl -notrace
+# Log file: C:/Mirror/Teaching/CENG5534/ADSD_SP2024/projects/full_adder_tri/syn/project_1/project_1.runs/impl_1/full_adder_tri.vdi
+# Journal file: C:/Mirror/Teaching/CENG5534/ADSD_SP2024/projects/full_adder_tri/syn/project_1/project_1.runs/impl_1\vivado.jou
+#-----------------------------------------------------------
+source full_adder_tri.tcl -notrace

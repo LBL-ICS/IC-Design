@@ -1,0 +1,44 @@
+#!/bin/csh -f
+################################################################################
+# simulation top script
+# change modelsim in this file dir and run "do this_file.do"
+# project dir ---+---> hdl source dir
+#                +---> sim script dir
+#
+################################################################################
+
+# check if current dir has modelsim config file
+set has_config  [file exists modelsim.do]
+# config modelsim 
+if {$has_config==1} { do modelsim.do  ; }
+
+echo "+====================================="
+echo "| Creat Lib Work soc                  "
+echo "+====================================="
+vlib work
+vmap work work 
+
+echo "+====================================="
+echo "| Complile RTL Code of soc            "
+echo "+====================================="
+vlog -f ../filelist/filelist.f  
+
+echo "+====================================="
+echo "| Compiler Pass                       "
+echo "| Being to Run Simulation             "
+echo "+====================================="
+vsim work.req_gnt_tb -t 1ns
+
+###################################### mus  ####################################
+add wave -noupdate -format logic -radix hexadecimal req_gnt_tb/u_req_gnt/clk     
+add wave -noupdate -format logic -radix hexadecimal req_gnt_tb/u_req_gnt/rst     
+add wave -noupdate -format logic -radix hexadecimal req_gnt_tb/u_req_gnt/en     
+add wave -noupdate -format logic -radix hexadecimal req_gnt_tb/u_req_gnt/req     
+add wave -noupdate -format logic -radix hexadecimal req_gnt_tb/u_req_gnt/gnt     
+add wave -noupdate -format logic -radix hexadecimal req_gnt_tb/u_req_gnt/u_master/nxt_req     
+add wave -noupdate -format logic -radix hexadecimal req_gnt_tb/u_req_gnt/u_master/req     
+add wave -noupdate -format logic -radix hexadecimal req_gnt_tb/u_req_gnt/u_master/gnt     
+add wave -noupdate -format logic -radix hexadecimal req_gnt_tb/u_req_gnt/u_slave/nxt_gnt     
+add wave -noupdate -format logic -radix hexadecimal req_gnt_tb/u_req_gnt/u_slave/req_d     
+      
+run 1us

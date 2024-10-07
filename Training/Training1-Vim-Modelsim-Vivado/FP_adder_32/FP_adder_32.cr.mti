@@ -1,0 +1,10 @@
+C:/Mirror/GitProject/IC-Design/Projects/Training1-Vim-Modelsim-Vivado/FP_adder_32/dut/FP_adder_32_1cc.sv {1 {vlog -work work -sv -stats=none C:/Mirror/GitProject/IC-Design/Projects/Training1-Vim-Modelsim-Vivado/FP_adder_32/dut/FP_adder_32_1cc.sv
+Model Technology ModelSim - Intel FPGA Edition vlog 2021.1 Compiler 2021.02 Feb  3 2021
+-- Compiling module full_subtractor_bw8
+-- Compiling module full_adder_bw24
+-- Compiling module FP_adder_32_1cc
+
+Top level modules:
+	FP_adder_32_1cc
+
+} {} {}}

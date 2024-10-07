@@ -1,0 +1,45 @@
+#!/bin/csh -f
+################################################################################
+# simulation top script
+# change modelsim in this file dir and run "do this_file.do"
+# project dir ---+---> hdl source dir
+#                +---> sim script dir
+#
+################################################################################
+
+# check if current dir has modelsim config file
+set has_config  [file exists modelsim.do]
+# config modelsim 
+if {$has_config==1} { do modelsim.do  ; }
+
+echo "+====================================="
+echo "| Creat Lib Work soc                  "
+echo "+====================================="
+vlib work
+vmap work work 
+
+echo "+====================================="
+echo "| Complile RTL Code of soc            "
+echo "+====================================="
+vlog -v ../dut/and_or.v ../tb/and_or_tb.v 
+
+echo "+====================================="
+echo "| Compiler Pass                       "
+echo "| Being to Run Simulation             "
+echo "+====================================="
+vsim work.and_or_tb -t 1ns
+
+###################################### mus  ####################################
+add wave -noupdate -format logic -color blue -radix hexadecimal and_or_tb/u_and_or/e     
+add wave -noupdate -format logic -color yellow -radix hexadecimal and_or_tb/u_and_or/a     
+add wave -noupdate -format logic -color yellow -radix hexadecimal and_or_tb/u_and_or/b     
+add wave -noupdate -format logic -color yellow -radix hexadecimal and_or_tb/u_and_or/c     
+add wave -noupdate -format logic -color yellow -radix hexadecimal and_or_tb/u_and_or/d     
+      
+add wave -noupdate -format logic -color blue -radix hexadecimal and_or_tb/e     
+add wave -noupdate -format logic -color yellow -radix hexadecimal and_or_tb/a     
+add wave -noupdate -format logic -color yellow -radix hexadecimal and_or_tb/b     
+add wave -noupdate -format logic -color yellow -radix hexadecimal and_or_tb/c     
+add wave -noupdate -format logic -color yellow -radix hexadecimal and_or_tb/d     
+
+run 1us
