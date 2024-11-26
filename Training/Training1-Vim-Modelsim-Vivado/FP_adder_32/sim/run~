@@ -21,7 +21,7 @@ vmap work work
 echo "+====================================="
 echo "| Complile RTL Code of soc            "
 echo "+====================================="
-vlog -f ../filelist/filelist_1cc.f  
+vlog -f ../filelist/filelist_13cc.f  
 #vlog -f ../filelist/filelist_13cc.f  
 
 echo "+====================================="

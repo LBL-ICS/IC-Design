@@ -75,7 +75,7 @@ initial begin
 end
 
 initial begin
-  wait (reset);
+  wait (~reset);
   wait (out_ready);
   @(negedge clock);
   for (j=0; j < TEST_SIZE; j = j+1) begin

@@ -16,7 +16,6 @@
 
 module tb_FP_adder();
 parameter TEST_SIZE = 10;
-reg [31:0]  golden_sum[TEST_SIZE-1:0]; 
 reg [31:0]  input_a[TEST_SIZE-1:0];
 reg [31:0]  input_b[TEST_SIZE-1:0];
 reg [31:0]  output_c[TEST_SIZE-1:0];

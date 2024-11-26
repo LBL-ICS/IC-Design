@@ -1,0 +1,287 @@
+m255
+K4
+z2
+!s11f vlog 2021.1 2021.02, Feb  3 2021
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Mirror/GitProject/IC-Design/Training/Training1-Vim-Modelsim-Vivado/basic_ddot/sim
+vbasic_ddot
+Z1 !s110 1728352644
+!i10b 1
+!s100 B3[UB?=N:z9;30LnDHY8^2
+IdV[<C5E<j?QBLhNA@[Q@V3
+R0
+w1664488243
+8../dut/basic_ddot.v
+F../dut/basic_ddot.v
+!i122 0
+L0 1 144
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+Z3 OV;L;2021.1;73
+r1
+!s85 0
+31
+Z4 !s108 1728352644.000000
+!s107 ../tb/tb_basic_ddot.v|../dut/basic_ddot.v|../dut/FP_adder.v|../dut/FP_multiplier.v|../dut/binary_lib.v|
+Z5 !s90 -reportprogress|300|-f|../filelist/filelist.f|
+!i113 1
+Z6 tCvgOpt 0
+vFP_adder
+R1
+!i10b 1
+!s100 SoFi;Uiez<HooaD5kMG<Y3
+IT5KhRiiXD?fl1ZBPDz<_R3
+R0
+w1664393730
+8../dut/FP_adder.v
+F../dut/FP_adder.v
+!i122 0
+L0 1 199
+R2
+R3
+r1
+!s85 0
+31
+R4
+Z7 !s107 ../tb/tb_basic_ddot.v|../dut/basic_ddot.v|../dut/FP_adder.v|../dut/FP_multiplier.v|../dut/binary_lib.v|
+R5
+!i113 1
+R6
+n@f@p_adder
+vFP_multiplier
+R1
+!i10b 1
+!s100 @MDSL_B0=PS_Yn]<2lPNK1
+IdS0Plh^Y]@1Pai7lA?kIQ3
+R0
+w1664393712
+8../dut/FP_multiplier.v
+F../dut/FP_multiplier.v
+!i122 0
+L0 1 137
+R2
+R3
+r1
+!s85 0
+31
+R4
+R7
+R5
+!i113 1
+R6
+n@f@p_multiplier
+vfull_adder_24bit
+R1
+!i10b 1
+!s100 `2njJ?KnihFl[2g5:5=LV1
+Il7z?mMkCYj`iJH1UL9X=m1
+R0
+Z8 w1664393489
+Z9 8../dut/binary_lib.v
+Z10 F../dut/binary_lib.v
+!i122 0
+L0 46 12
+R2
+R3
+r1
+!s85 0
+31
+R4
+R7
+R5
+!i113 1
+R6
+vfull_adder_8bit
+R1
+!i10b 1
+!s100 nLG]iQDh6CJ=j?AG86hGf0
+IGlN2McCjlnc4YKd9jQ9XL1
+R0
+R8
+R9
+R10
+!i122 0
+L0 24 10
+R2
+R3
+r1
+!s85 0
+31
+R4
+R7
+R5
+!i113 1
+R6
+vfull_subber
+R1
+!i10b 1
+!s100 E<UY2P^lkD7SHj?QJf^@O0
+I`JAmbkLA>aQel`MkERMig0
+R0
+R8
+R9
+R10
+!i122 0
+L0 34 12
+R2
+R3
+r1
+!s85 0
+31
+R4
+R7
+R5
+!i113 1
+R6
+vfull_subber_one_output
+R1
+!i10b 1
+!s100 Cg3M5IYb_AicHMj<2CKbR0
+IS<][Tj78Q;US;n[3`^KGC3
+R0
+R8
+R9
+R10
+!i122 0
+L0 8 9
+R2
+R3
+r1
+!s85 0
+31
+R4
+R7
+R5
+!i113 1
+R6
+vleadingOneDetector
+R1
+!i10b 1
+!s100 _aF61[z8n`JH>]ma:CVaO3
+I2=dFN^l8^B4;V=2ji`6JV2
+R0
+R8
+R9
+R10
+!i122 0
+L0 74 28
+R2
+R3
+r1
+!s85 0
+31
+R4
+R7
+R5
+!i113 1
+R6
+nleading@one@detector
+vmultiplier
+R1
+!i10b 1
+!s100 0o1K03zeF9;AYh`0Sk6Uo3
+I5Z9h8J>MAl@_QnjCYU[U23
+R0
+R8
+R9
+R10
+!i122 0
+L0 1 7
+R2
+R3
+r1
+!s85 0
+31
+R4
+R7
+R5
+!i113 1
+R6
+vshifter
+R1
+!i10b 1
+!s100 fK5DHQhAM5XV14ncSaS5E3
+Iz]@L:P4?cziObGfn;SUfe3
+R0
+R8
+R9
+R10
+!i122 0
+L0 65 9
+R2
+R3
+r1
+!s85 0
+31
+R4
+R7
+R5
+!i113 1
+R6
+vtb_basic_ddot
+R1
+!i10b 1
+!s100 jCXT6X0ccfeg=Dmn[Z4Pl2
+IiN86[TEYe4=c=WNL=E@cP2
+R0
+w1664488485
+8../tb/tb_basic_ddot.v
+F../tb/tb_basic_ddot.v
+!i122 0
+L0 1 96
+R2
+R3
+r1
+!s85 0
+31
+R4
+R7
+R5
+!i113 1
+R6
+vtwoscomplement
+R1
+!i10b 1
+!s100 ;5;Ej50ogoDBgQ2h2QAG03
+Iz6mnAkHDYf35R<4Jm3[j22
+R0
+R8
+R9
+R10
+!i122 0
+L0 17 7
+R2
+R3
+r1
+!s85 0
+31
+R4
+R7
+R5
+!i113 1
+R6
+vtwoscomplement_1
+R1
+!i10b 1
+!s100 ccLK3^0YciiaA=[T0=iLD0
+IO46:PF0SkKjUM]0=GhU1=3
+R0
+R8
+R9
+R10
+!i122 0
+L0 58 7
+R2
+R3
+r1
+!s85 0
+31
+R4
+R7
+R5
+!i113 1
+R6
