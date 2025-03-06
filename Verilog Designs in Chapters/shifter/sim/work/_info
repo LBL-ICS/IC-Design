@@ -1,0 +1,33 @@
+m255
+K4
+z2
+!s11f vlog 2021.1 2021.02, Feb  3 2021
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Mirror/Teaching/CENG4354/SP2025/shifter/sim
+vshifter
+!s110 1741201984
+!i10b 1
+!s100 UcHF24Zb>aL`z193Q0AX52
+I6EJgO6[n;`adiWK?Q6ac?2
+R0
+w1741201953
+8../dut/shifter.v
+F../dut/shifter.v
+!i122 1
+L0 1 14
+VDg1SIo80bB@j0V0VzS_@n1
+OV;L;2021.1;73
+r1
+!s85 0
+31
+!s108 1741201984.000000
+!s107 ../dut/shifter.v|
+!s90 -reportprogress|300|-work|work|../dut/shifter.v|
+!i113 1
+o-work work
+tCvgOpt 0
